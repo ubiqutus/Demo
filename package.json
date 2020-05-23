@@ -1,0 +1,26 @@
+{
+    "name"         : "iotworx",
+    "version"      : "0.0.1",
+    "description"  : "IotWorx Test server",
+    "dependencies": {
+        "node-red": "1.*",
+		"node-red-dashboard": "^2.22.1",
+		"node-red-node-email": "^1.7.8"
+    },
+    "keywords"     : [ "node-red" ],
+    "node-red"     : {
+        "settings" : {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    },
+    "scripts": {
+        "start": "node --max-old-space-size=160 ./node_modules/node-red/red.js flow.json"
+    },
+	"repository"   : {
+	  "type": "git",
+	  "url": "https://github.com/ubiqutus/iotworx.git"
+	},
+    "author"       : "Yannis",
+	"license"	   : "Apache-2.0"
+}

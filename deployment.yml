@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: iotworx
+  name: iotworx
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: iotworx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: iotworx
+    spec:
+      containers:
+      - name: iotworx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iotworx-srv
+  labels:
+    app: iotworx
+spec:
+  type: NodePort
+  ports:
+    - port: 1880
+      name: tcp1885
+      protocol: TCP
+      nodePort: 31885
+    - port: 2080
+      name: udp2070
+      protocol: UDP
+      nodePort: 32070
+  selector:
+    app: iotworx
