@@ -19,6 +19,7 @@ Copy the files in a folder and run:
 <b>node-red</b>
 
 to start Node Red. This will create an instance running on localhost:1880.
+The ui is available at localhost:1880/ui.
 The flows can be edited and committed by clicking on the "deploy" button.
 To finish the flows and exit, enter CTRL+C and Y
 
