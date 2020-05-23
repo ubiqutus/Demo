@@ -16,7 +16,7 @@ How to use:
 
 Copy the files in a folder and run:
 
-<bi>node-red</bi>
+<b>node-red</b>
 
 to start Node Red. This will create an instance running on localhost:1880.
 The flows can be edited and committed by clicking on the "deploy" button.
@@ -24,11 +24,11 @@ To finish the flows and exit, enter CTRL+C and Y
 
 To run the instance in Docker, run the following:
 
-<bi>docker build -t demo:v1 . </bi>              
+<b>docker build -t demo:v1 . </b>              
 
 (do not forget the dot at the end)
 
-<bi>docker run -it -p 1880:1880 demo:v1 </bi>
+<b>docker run -it -p 1880:1880 demo:v1 </b>
 
 This will create a container with an image of the application which will run on localhost:1880. 
 Please note that, any changes done while running as a Docker image will not persist. The changes are stored locally within the image and only persist while the image is running.
