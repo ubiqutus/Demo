@@ -1,13 +1,10 @@
-FROM nodered/node-red
-USER root
-RUN apk update && apk upgrade
+FROM node:14
+WORKDIR /usr/src/app
+COPY package*.json ./
 
-USER node-red
-COPY package.json .
+RUN npm install
 
-RUN npm install --only=production
+COPY . .
 
-# Copy  the Node-RED project files into place
-COPY flow_cred.json /data/flow_cred.json
-COPY flow.json /data/flow.json
-COPY deployment.yml /data/deployment.yml
+
+CMD [ "node", "init.js" ]

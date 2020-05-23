@@ -1,13 +1,17 @@
 {
-    "name"         : "iotworx",
+    "name"         : "demo",
     "version"      : "0.0.1",
-    "description"  : "IotWorx Test server",
+    "description"  : "Demo Interface",
     "dependencies": {
+		"express": "^4.16.1",
         "node-red": "1.*",
-		"node-red-dashboard": "^2.22.1",
-		"node-red-node-email": "^1.7.8"
+		"node-red-dashboard": "2.22.*",
+		"node-red-node-email": "1.7.*"
     },
-    "keywords"     : [ "node-red" ],
+	"main": "init.js",
+    "keywords": [
+        "node-red"
+    ],
     "node-red"     : {
         "settings" : {
             "flowFile": "flow.json",
@@ -15,12 +19,12 @@
         }
     },
     "scripts": {
-        "start": "node --max-old-space-size=160 ./node_modules/node-red/red.js flow.json"
+        "start": "node init.js"
     },
 	"repository"   : {
 	  "type": "git",
-	  "url": "https://github.com/ubiqutus/iotworx.git"
+	  "url": "https://github.com/ubiqutus/Demo.git"
 	},
-    "author"       : "Yannis",
+    "author"       : "Yannis Argirakis",
 	"license"	   : "Apache-2.0"
 }
