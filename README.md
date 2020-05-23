@@ -5,6 +5,7 @@ This demo application creates a dokerised container which can be deployed in a K
 For the purpose of the demo, a ui has been added to produce a visualisation of the data, and a trigger which can be used to generate data (they will be the same values, but a randomiser can be added to add some variety...).
 
 Prerequisites
+
 Node Red (https://nodered.org/docs/getting-started/local)
 
 Node.js  (https://nodejs.org/en/about/releases/)
@@ -19,7 +20,7 @@ Copy the files in a folder and run:
 
 to start Node Red. This will create an instance running on localhost:1880.
 The flows can be edited and committed by clicking on the "deploy" button.
-To finish the flows, enter CTRL+C and Y
+To finish the flows and exit, enter CTRL+C and Y
 
 To run the instance in Docker, run the following:
 
